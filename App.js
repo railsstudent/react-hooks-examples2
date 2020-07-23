@@ -1,6 +1,7 @@
 import React from 'react';
 import Memo from './Memo';
 import Callback from './Callback';
+import Context from './Context';
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Memo />
       <hr />
       <Callback />
+      <hr />
+      <Context />
     </div>
   );
 }
