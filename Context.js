@@ -13,14 +13,28 @@ const UserContext = createContext([
 
 const UserComponent = () => {
   const [user, setUser] = useContext(UserContext)
+
+  const updateUserSuffix = (user, delta) => {
+    // return a function that update user suffix
+    return () => setUser({...user, suffix: user.suffix + delta})
+  }
+  const buttonStyles = { 
+    marginRight: '0.5rem',
+    borderRadius: '5px',
+    padding: '0.5rem'
+  }
+
   return (
     <div>
       <p>first name: {user.firstname}</p>
       <p>last name: {user.lastname}</p>
       <p>email: {user.email}</p>
       <p>suffix: {user.suffix}</p>
-      <button onClick={() => setUser({ ...user, suffix: user.suffix + 1 }) }>
+      <button onClick={updateUserSuffix(user, 1)} style={buttonStyles}>
         Increment suffix
+      </button>
+      <button onClick={updateUserSuffix(user, -1)} style={buttonStyles}>
+        Decrement suffix
       </button>
     </div>
   );

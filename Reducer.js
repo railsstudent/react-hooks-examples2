@@ -32,7 +32,8 @@ const reducer = (state, action) => {
 const ReducerComponent = () => {
   const [{r, g, b}, dispatch] = useReducer(reducer, { r: 0, b: 0, g: 0 })
   const style = {
-    marginRight: '0.5rem'
+    marginRight: '0.5rem',
+    marginBottom: '0.25rem'
   }
   return (
     <div>
