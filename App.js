@@ -2,6 +2,7 @@ import React from 'react';
 import Memo from './Memo';
 import Callback from './Callback';
 import Context from './Context';
+import Reducer from './Reducer';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Callback />
       <hr />
       <Context />
+      <hr />
+      <Reducer />
     </div>
   );
 }
